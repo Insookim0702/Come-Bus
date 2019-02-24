@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kinso.bus.PlusStopByActivity">
+    <TextView
+        android:text="ComeBus"
+        android:textSize="40px"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:text="도시 : "
+            android:textStyle="bold"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/spinner1"
+            android:background="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:entries="@array/city"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#2a2a4c"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:text="정류장ID : "
+            android:textStyle="bold"
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:id="@+id/ed_busstopid"
+            android:hint="정류장번호!!로 입력하세요"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#FFFFFF"
+            android:completionThreshold="1"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search"
+            android:background="#f6efd5"
+            android:id="@+id/searchbutton"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_busstopname"
+        android:text="원인재역 (6번 출구)"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#2a2a4c"
+        android:textSize="50px"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/busInfoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="LinearLayoutManager"
+        ></android.support.v7.widget.RecyclerView>
+</LinearLayout>
+</LinearLayout>
